@@ -2,7 +2,7 @@
 title: Minimalist is diz theme
 ---
 
-![](/images/img.png)
+![](/diz-theme-minimalist/images/img.png)
 
 Minimalist is a theme made simple and easy to read
 

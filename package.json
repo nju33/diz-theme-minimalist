@@ -1,7 +1,7 @@
 {
   "name": "diz-theme-minimalist",
   "description": "A Diz theme",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "author": "nju33 <nju33.ki@gmail.com>",
   "bugs": {
     "url": "https://github.com/nju33/diz-theme-minimalist/issues",
@@ -64,21 +64,16 @@
   },
   "homepage": "https://github.com/nju33/generator-diz#readme",
   "keywords": [
-    "blog",
     "diz",
-    "gulp",
-    "html",
-    "markdown",
-    "react",
-    "ssg",
-    "static site generator",
-    "stream"
+    "diz-theme",
+    "blog"
   ],
   "license": "MIT",
   "main": "minimalist.js",
   "repository": "nju33/diz-theme-minimalist",
   "scripts": {
     "___postinstall": "(cd node_modules/lwip && npm i)",
+    "copy-blog2docs": "cp -r local/blog/* docs/",
     "preinstall": "./dependencies.sh",
     "prepublish": "yarn build",
     "build": "NODE_ENV=production gulp style script",

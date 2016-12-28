@@ -5,7 +5,7 @@ export default class Sidebar extends Component {
   render() {
     const {site, posts} = this.props;
     return (
-      <Menu right pageWrapId={'main'} width={210} className="sidebar__box">
+      <Menu right pageWrapId={'main'} width={300} className="sidebar__box">
         <h1 className="title">
           <a href={site.url}>{site.title}</a>
         </h1>

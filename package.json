@@ -12,7 +12,6 @@
     "csspath": "./dist/index.css"
   },
   "dependencies": {
-    "diz": "^0.0.3",
     "react": "^15.4.1",
     "react-burger-menu": "^1.10.10",
     "react-dom": "^15.4.1"
@@ -78,5 +77,8 @@
     "prepublish": "yarn build",
     "build": "NODE_ENV=production gulp style script",
     "start": "gulp watch"
+  },
+  "peerDependencies": {
+    "diz": "^0.0.3"
   }
 }

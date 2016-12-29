@@ -54,3 +54,9 @@ Object.keys(conf).forEach(key => {
     });
   });
 });
+
+gulp.task('jsx', () => {
+  gulp.src('theme/Minimalist.jsx')
+    .pipe(require('gulp-babel')())
+    .pipe(gulp.dest('dist/theme/'))
+});

@@ -1,8 +1,10 @@
+import 'babel-register'
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
-import blog from './gulp-tasks/blog';
+// import blog from './gulp-tasks/blog';
 import style from './gulp-tasks/style';
 import script from './gulp-tasks/script';
+import jsx from './gulp-tasks/jsx';
 import image from './gulp-tasks/image';
 import favicon from './gulp-tasks/favicon';
 import bsConfig from './bs-config';
@@ -11,11 +13,11 @@ import pkg from './package';
 const bs = browserSync.create(pkg.name);
 
 const conf = {
-  blog: [
-    null,
-    'local/',
-    '+(theme|src)/**/*.+(md|less|js|jsx)'
-  ],
+  // blog: [
+  //   null,
+  //   'local/',
+  //   '+(theme|src)/**/*.+(md|less|js|jsx)'
+  // ],
   style: [
     'src/styles/index.less',
     process.env.NODE_ENV === 'production' ? 'dist/' : 'local/blog/styles/',
@@ -26,21 +28,34 @@ const conf = {
     'dist/',
     'lib/**/*.js'
   ],
+  jsx: [
+    'theme/**/*.jsx',
+    'dist/theme',
+    'theme/**/*.jsx'
+  ],
   image: ['assets/images/*', 'local/blog/images/'],
   favicon: ['assets/favicons/*', 'local/blog/']
 };
 
 const tasks = {
-  blog,
+  // blog,
   style,
   script,
+  jsx,
   image,
   favicon
 };
 
 Object.keys(conf).forEach(key => {
   const task = tasks[key];
-  gulp.task(task.name, task.stream.bind(task, gulp, conf));
+  if (typeof task === 'undefined') {
+    return;
+  }
+  if (Array.isArray(task.dependencies)) {
+    gulp.task(task.name, task.dependencies, task.stream.bind(task, gulp, conf));
+  } else {
+    gulp.task(task.name, task.stream.bind(task, gulp, conf));
+  }
 
   const preTasks = Object.keys(conf).filter(key => Boolean(conf[key][2]));
   gulp.task('watch', preTasks, () => {

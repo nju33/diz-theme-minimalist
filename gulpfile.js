@@ -7,4 +7,4 @@ require('babel-register')({
     "transform-object-rest-spread"
   ]
 });
-module.exports = require('./dist/minimalist').default;
+require('./gulpmain');

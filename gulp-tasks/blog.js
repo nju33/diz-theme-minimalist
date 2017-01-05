@@ -1,7 +1,7 @@
 import path from 'path';
-import Minimalist from '..';
+import Renderer from '../lib/minimalist';
 
-const renderer = new Minimalist({
+const renderer = new Renderer({
   config: {
     base: process.cwd() + '/src/blogs/'
   },

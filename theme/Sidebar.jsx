@@ -3,11 +3,14 @@ import {push as Menu} from 'react-burger-menu';
 
 export default class Sidebar extends Component {
   render() {
-    const {site, posts} = this.props;
+    const {post} = this.props;
+    const {config} = post.root;
+    const {posts} = post.directory;
+
     return (
       <Menu right pageWrapId={'main'} width={300} className="sidebar__box">
         <h1 className="title">
-          <a href={site.url}>{site.title}</a>
+          <a href={config.url}>{config.title}</a>
         </h1>
         <ul className="sidebar__list">
           {posts.map((post, idx) => (

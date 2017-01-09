@@ -78,7 +78,7 @@
     "copy-blog2docs": "cp -r local/blog/* docs/",
     "preinstall": "./dependencies.sh",
     "prepublish": "yarn build",
-    "build": "NODE_ENV=production gulp style script",
+    "build": "NODE_ENV=production gulp style jsx script",
     "start": "gulp watch"
   },
   "peerDependencies": {}

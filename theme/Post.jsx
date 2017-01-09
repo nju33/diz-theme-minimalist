@@ -2,7 +2,8 @@ import React, {Component, PropTypes} from 'react';
 
 export default class Post extends Component {
   render() {
-    const {title, contents, next, prev} = this.props;
+    const {title, contents, data} = this.props.post;
+    const {prev, next} = data;
 
     const prevElem = (() => {
       if (prev) {
@@ -40,7 +41,7 @@ export default class Post extends Component {
   }
 }
 
-Post.propTypes = {
-  title: PropTypes.string.isRequired,
-  contents: PropTypes.string.isRequired
-};
+// Post.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   contents: PropTypes.string.isRequired
+// };

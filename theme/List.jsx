@@ -2,7 +2,9 @@ import React, {Component, PropTypes} from 'react';
 
 export default class List extends Component {
   render() {
-    const {items, prev, next} = this.props;
+    const {data} = this.props.post;
+    const {items, prev, next} = data;
+
     const postElements = items.map((post, idx) => {
       return (
         <article key={idx} className="list__item">

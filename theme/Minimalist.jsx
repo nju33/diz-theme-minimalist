@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-// import Theme from 'diz/theme';
-// import Breadcrumb from './Breadcrumb.jsx';
-// import Sidebar from './Sidebar.jsx';
-// import List from './List.jsx';
-// import Post from './Post.jsx';
-// import Footer from './Footer.jsx';
+import Breadcrumb from './Breadcrumb.jsx';
+import Sidebar from './Sidebar.jsx';
+import List from './List.jsx';
+import Post from './Post.jsx';
+import Footer from './Footer.jsx';
 
 export default class Minimalist extends Component{
   // static buildJsonLDOfBreadcrumb(breadcrumb) {
@@ -38,22 +37,34 @@ export default class Minimalist extends Component{
   //   return Post;
   // }
 
+  getContent(post) {
+    switch (post.type) {
+      case 'LIST': {
+        return List;
+      }
+      case 'POST': {
+        return Post;
+      }
+      default: {
+        return Post;
+      }
+    }
+  }
+
   render() {
-    const {props} = this;
-    const {type, breadcrumb} = props;
-    // const Content = this.renderContents(type);
+    const {type, post} = this.props;
+    const Content = this.getContent(post);
 
     return (
       <div className="container">
-        asdf
-        {/* <Sidebar {...props}/>
+        <Sidebar post={post}/>
         <main id="main" className="main">
           <div className="contents">
-            <Breadcrumb {...props}/>
-            <Content {...props}/>
+            {/* <Breadcrumb {...props}/> */}
+            <Content post={post}/>
           </div>
-          <Footer {...props}/>
-        </main> */}
+          <Footer post={post}/>
+        </main>
       </div>
     );
   }

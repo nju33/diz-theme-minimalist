@@ -2763,9 +2763,9 @@ he@1.1.x:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.0.tgz#29319d49beec13a9b1f3c4f9b2a6dde4859bb2a7"
 
-"hex-color-regex@git+https://github.com/btholt/hex-color-regex.git":
+"hex-color-regex@https://github.com/btholt/hex-color-regex.git":
   version "1.1.0"
-  resolved "git+https://github.com/btholt/hex-color-regex.git#9486788aab7c8d79a9bc70a9141669b95a03f2eb"
+  resolved "https://github.com/btholt/hex-color-regex.git#9486788aab7c8d79a9bc70a9141669b95a03f2eb"
 
 hexa-color-regex@1.0.0:
   version "1.0.0"
@@ -3638,6 +3638,14 @@ magic-string@^0.14.0:
   dependencies:
     vlq "^0.2.1"
 
+magu@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/magu/-/magu-0.0.2.tgz#fe7bca97d2643a909fefe50098213926ff4fc4a4"
+  dependencies:
+    cheerio "^0.22.0"
+    marked "^0.3.6"
+    pupa "^1.0.0"
+
 map-cache@^0.2.0:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
@@ -3645,6 +3653,10 @@ map-cache@^0.2.0:
 map-stream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194"
+
+marked@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.14"
@@ -4579,6 +4591,10 @@ punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
+pupa@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/pupa/-/pupa-1.0.0.tgz#9a9568a5af7e657b8462a6e9d5328743560ceff6"
+
 q@^1.1.2:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.4.1.tgz#55705bcd93c5f3673530c2c2cbc0c2b3addc286e"
@@ -4834,7 +4850,7 @@ request-progress@~2.0.1:
   dependencies:
     throttleit "^1.0.0"
 
-request@2.78.0:
+request@2.78.0, request@^2.65.0, request@^2.72.0:
   version "2.78.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.78.0.tgz#e1c8dec346e1c81923b24acdb337f11decabe9cc"
   dependencies:
@@ -4859,7 +4875,7 @@ request@2.78.0:
     tough-cookie "~2.3.0"
     tunnel-agent "~0.4.1"
 
-request@^2.44.0, request@^2.65.0, request@^2.72.0, request@^2.79.0, request@~2.79.0:
+request@^2.44.0, request@^2.79.0, request@~2.79.0:
   version "2.79.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
   dependencies:

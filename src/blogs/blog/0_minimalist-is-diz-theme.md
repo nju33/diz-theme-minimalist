@@ -1,5 +1,7 @@
 ---
+id: urn:uuid:be1934b0-db48-11e6-8916-89d1b9e3e58f
 title: Minimalist is diz theme
+date: 2017-01-15T17:35:42.189Z
 ---
 
 ![](/diz-theme-minimalist/images/img.png)

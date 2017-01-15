@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
-// import blog from './gulp-tasks/blog';
+import blog from './gulp-tasks/blog';
 import style from './gulp-tasks/style';
 import script from './gulp-tasks/script';
 import jsx from './gulp-tasks/jsx';
@@ -12,11 +12,11 @@ import pkg from './package';
 const bs = browserSync.create(pkg.name);
 
 const conf = {
-  // blog: [
-  //   null,
-  //   'local/',
-  //   '+(theme|src)/**/*.+(md|less|js|jsx)'
-  // ],
+  blog: [
+    'src/blogs/',
+    'docs/',
+    'src/blogs/**/*'
+  ],
   style: [
     'src/styles/index.less',
     process.env.NODE_ENV === 'production' ? 'dist/' : 'local/blog/styles/',
@@ -37,7 +37,7 @@ const conf = {
 };
 
 const tasks = {
-  // blog,
+  blog,
   style,
   script,
   jsx,

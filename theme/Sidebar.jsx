@@ -7,7 +7,8 @@ export default class Sidebar extends Component {
     const {mainDirectory, config} = post.root;
 
     return (
-      <Menu right pageWrapId={'main'} width={300} className="sidebar__box">
+      <Menu radiumConfig={{ userAgent: 'all' }}
+            right pageWrapId={'main'} width={300} className="sidebar__box">
         <h1 className="title">
           <a href={config.url}>{config.title}</a>
         </h1>

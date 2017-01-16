@@ -28,7 +28,3 @@ export default class Breadcrumb extends Component {
     )
   }
 }
-
-Breadcrumb.propTypes = {
-  breadcrumb: PropTypes.object
-};

@@ -32,7 +32,7 @@ const conf = {
     'dist/',
     'theme/**/*.jsx'
   ],
-  image: ['assets/images/*', 'local/blog/images/'],
+  image: ['assets/images/**/*', 'local/blog/images/'],
   favicon: ['assets/favicons/*', 'local/blog/']
 };
 

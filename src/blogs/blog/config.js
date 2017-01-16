@@ -25,8 +25,7 @@ module.exports = {
     });
   },
   plugins: [
-    new CollectionPageGenerator({pager: 1}),
-    // new CollectionPageGenerator({pager: 1, target: 'categories'}),
+    new CollectionPageGenerator({pager: 30}),
     new AtomFeed()
   ]
 };

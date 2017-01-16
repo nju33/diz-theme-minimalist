@@ -38,8 +38,8 @@ export default class Minimalist extends Component{
       '@type': 'ListItem',
       position: 2,
       item: omitBy({
-        '@id': post.directory.name || null,
-        name: post.directory.name || null
+        '@id': post.directory.name || 'list',
+        name: post.directory.name || 'list'
       }, isNull)
     });
 
@@ -80,5 +80,3 @@ export default class Minimalist extends Component{
     );
   }
 }
-
-// Minimalist.init();

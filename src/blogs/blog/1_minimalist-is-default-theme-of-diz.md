@@ -4,7 +4,7 @@ title: MinimalistはDizのデフォルトテーマです
 date: 2017-01-15T17:36:12.560Z
 ---
 
-![](/diz-theme-minimalist/images/imas-haruka.jpg)
+![](/images/diz-theme-minimalist/imas-haruka.jpg)
 
 装飾をほとんどしていないテーマです。
 

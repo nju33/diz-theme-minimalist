@@ -2,11 +2,12 @@ import React, {Component, PropTypes} from 'react';
 
 export default class Footer extends Component {
   render() {
-    const {title} = this.props.site;
+    const {post} = this.props;
+    const repoURL = 'https://github.com/nju33/diz';
 
     return (
       <div className="footer__box">
-        powerd by <a href="https://github.com/nju33/diz">diz</a> © 2016 {title}
+        powerd by <a href={repoURL}>diz</a> © 2016 {post.root.config.title}
       </div>
     );
   }

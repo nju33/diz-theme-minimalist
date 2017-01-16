@@ -2,13 +2,19 @@ import React, {Component, PropTypes} from 'react';
 
 export default class List extends Component {
   render() {
-    const {items, prev, next} = this.props;
+    const {post} = this.props;
+    const {directory} = post;
+    const {items, page} = post.data;
+
+    const prev = directory.posts[page - 2];
+    const next = directory.posts[page];
+
     const postElements = items.map((post, idx) => {
       return (
         <article key={idx} className="list__item">
           <header className="list__title">
             <h2>
-              <a href={post.absURL}>{post.title}</a>
+              <a href={post.absURL}>{post.data.title}</a>
             </h2>
           </header>
           <div className="list__contents"

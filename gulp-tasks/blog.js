@@ -1,25 +1,18 @@
 import path from 'path';
-import Renderer from '../lib/minimalist';
+import Diz from 'diz';
+// import Minimalist from '../lib/minimalist-renderer';
 
-const renderer = new Renderer({
-  config: {
-    base: process.cwd() + '/src/blogs/'
-  },
-  sites: {
-    blog: {
-      title: 'Minimalist',
-      description: 'A Diz theme',
-      url: 'http://example.com'
-    }
-  }
-});
 
 export default {
   name: 'blog',
   stream(gulp, config) {
-    renderer.load().then(({render, bundle}) => {
-      render().pipe(gulp.dest(config[this.name][1]));
-      bundle(handleBundler.bind(null, gulp));
+    Diz.load({base: './src/blogs/'}).then(roots => {
+      const renderer = new Diz({roots});
+      renderer.render()
+        .pipe(gulp.dest('./local/'));
+      renderer.bundle().then(stream => {
+        stream.pipe(gulp.dest('./local/'));
+      })
     });
   }
 }

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="/styles/index.css"> -->
+  <title>Document</title>
+  <style>@charset "utf-8";
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover,
+a:focus {
+  outline-width: 0;
+}
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 18px;
+  height: 15px;
+  right: 27px;
+  top: 27px;
+}
+.bm-burger-button button {
+  cursor: pointer;
+}
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+.sidebar__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb__box {
+  overflow: hidden;
+  margin-bottom: .75em;
+}
+.breadcrumb__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb__item {
+  float: left;
+}
+.breadcrumb__item:nth-child(n+2):before {
+  content: "/";
+  margin: .3em;
+}
+.list__title {
+  font-size: 1.2em;
+}
+.list__more {
+  position: relative;
+  color: #a3668b;
+}
+.list__more:before {
+  content: '';
+  position: absolute;
+  left: -0.5em;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  -webkit-transition: width 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s, border-bottom-color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s, height 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), border-right-color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: width 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s, border-bottom-color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s, height 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), border-right-color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: transparent;
+}
+.list__more:hover, .list__more:focus {
+  color: #c9a6bb;
+}
+.list__more:hover:before, .list__more:focus:before {
+  -webkit-transition: width 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), border-bottom-color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), height 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s, border-right-color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s;
+  transition: width 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), border-bottom-color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955), height 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s, border-right-color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s;
+  width: calc(100% + 1em);
+  border-bottom-color: #a3668b;
+  height: 33.33333%;
+  border-right-color: #a3668b;
+}
+.post__box {
+  clear: left;
+}
+.pager__box {
+  overflow: hidden;
+}
+.pager__link {
+  color: #a3668b;
+}
+.pager__link:first-child {
+  float: left;
+}
+.pager__link:last-child {
+  float: right;
+}
+.footer__box {
+  text-align: center;
+}
+@font-face{
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: normal;
+}
+@font-face{
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+body {
+  font: 14px/1.6 -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+  color: #373a47;
+  background: #f3f3f3;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: .2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: .2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+a:hover, a:focus {
+  color: #a3668b;
+}
+img {
+  max-width: 100%;
+}
+@media (max-width: 660px) {
+  img {
+    margin-left: -1em;
+    max-width: calc(100% + 2em);
+  }
+}
+.main {
+  max-width: 660px;
+  margin: 0 auto;
+}
+@media (max-width: 660px) {
+  .main {
+    padding: 0 1em;
+  }
+}
+.contents {
+  padding: 1.85em 0;
+  min-height: calc(100vh - 80px);
+}
+.title {
+  margin-bottom: .5em;
+}
+</style>
+</head>
+<body>
+
+<div id="blog" class="blog"><div class="container" data-reactroot="" data-reactid="1" data-react-checksum="-1013418884"><div data-radium="true" data-reactid="2"><div class="bm-overlay" style="position:fixed;z-index:1;width:100%;height:100%;background:rgba(0, 0, 0, 0.3);opacity:0;transform:translate3d(100%, 0, 0);transition:opacity 0.3s, -ms-transform 0s 0.3s, -webkit-transform 0s 0.3s, transform 0s 0.3s;-webkit-transform:translate3d(100%, 0, 0);-ms-transform:translate3d(100%, 0, 0);-webkit-transition:opacity 0.3s, -webkit-transform 0s 0.3s, transform 0s 0.3s;" data-radium="true" data-reactid="3"></div><div id="" class="bm-menu-wrap" style="position:fixed;right:0;z-index:2;width:300px;height:100%;transform:translate3d(100%, 0, 0);transition:all 0.5s;-webkit-transform:translate3d(100%, 0, 0);-ms-transform:translate3d(100%, 0, 0);-webkit-transition:all 0.5s;" data-radium="true" data-reactid="4"><div class="bm-menu" style="height:100%;box-sizing:border-box;overflow:auto;-moz-box-sizing:border-box;" data-radium="true" data-reactid="5"><nav class="bm-item-list" style="height:100%;" data-radium="true" data-reactid="6"><h1 class="title" style="display:block;outline:none;" data-radium="true" data-reactid="7"><a href="https://nju33.github.io/diz-theme-minimalist/" data-reactid="8">Minimalist</a></h1><ul class="sidebar__list" style="display:block;outline:none;" data-radium="true" data-reactid="9"><li class="sidebar__item" data-reactid="10"><a href="/diz-theme-minimalist/posts/minimalist-is-diz-theme/" class="sidebar__link" data-reactid="11">Minimalist is diz theme</a></li><li class="sidebar__item" data-reactid="12"><a href="/diz-theme-minimalist/posts/minimalist-is-default-theme-of-diz/2/" class="sidebar__link" data-reactid="13">MinimalistはDizのデフォルトテーマです</a></li></ul></nav></div><div data-radium="true" data-reactid="14"><div class="bm-cross-button" style="position:absolute;width:24px;height:24px;right:8px;top:8px;" data-radium="true" data-reactid="15"><span style="position:absolute;top:6px;right:14px;" data-radium="true" data-reactid="16"><span class="bm-cross" style="position:absolute;width:3px;height:14px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);" data-radium="true" data-reactid="17"></span><span class="bm-cross" style="position:absolute;width:3px;height:14px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);" data-radium="true" data-reactid="18"></span></span><button style="position:absolute;left:0;top:0;width:100%;height:100%;margin:0;padding:0;border:none;text-indent:-9999px;background:transparent;outline:none;" data-radium="true" data-reactid="19">Close Menu</button></div></div></div><div class="bm-burger-button" style="z-index:1;" data-radium="true" data-reactid="20"><span data-radium="true" data-reactid="21"><span class="bm-burger-bars" style="position:absolute;height:20%;left:0;right:0;top:0%;opacity:1;" data-radium="true" data-reactid="22"></span><span class="bm-burger-bars" style="position:absolute;height:20%;left:0;right:0;top:40%;opacity:1;" data-radium="true" data-reactid="23"></span><span class="bm-burger-bars" style="position:absolute;height:20%;left:0;right:0;top:80%;opacity:1;" data-radium="true" data-reactid="24"></span></span><button style="position:absolute;left:0;top:0;width:100%;height:100%;margin:0;padding:0;border:none;opacity:0;font-size:8px;" data-radium="true" data-reactid="25">Open Menu</button></div></div><main id="main" class="main" data-reactid="26"><div class="contents" data-reactid="27"><div class="breadcrumb__box" data-reactid="28"><ul class="breadcrumb__list" data-reactid="29"><li class="breadcrumb__item" data-reactid="30"><a class="breadcrumb__link" href="/diz-theme-minimalist/" data-reactid="31">home</a></li><li class="breadcrumb__item" data-reactid="32"><a class="breadcrumb__link" data-reactid="33">list</a></li><li class="breadcrumb__item" data-reactid="34"><a class="breadcrumb__link" href="/diz-theme-minimalist/2/" data-reactid="35">Minimalist / 2</a></li></ul></div><div class="list__box" data-reactid="36"><div class="list__items" data-reactid="37"><article class="list__item" data-reactid="38"><header class="list__title" data-reactid="39"><h2 data-reactid="40"><a href="/diz-theme-minimalist/posts/minimalist-is-default-theme-of-diz/2/" data-reactid="41">MinimalistはDizのデフォルトテーマです</a></h2></header><div class="list__contents" data-reactid="42"><p><img src="/diz-theme-minimalist/images/imas-haruka.jpg" alt=""></p>
+<p>装飾をほとんどしていないテーマです。</p></div><a class="list__more" href="/diz-theme-minimalist/posts/minimalist-is-default-theme-of-diz/2/" data-reactid="43">Read more</a></article></div><div class="pager__box" data-reactid="44"><a class="pager__link" href="/diz-theme-minimalist/" data-reactid="45">Prev</a><a class="pager__link" data-reactid="46"></a></div></div></div><div class="footer__box" data-reactid="47"><!-- react-text: 48 -->powerd by <!-- /react-text --><a href="https://github.com/nju33/diz" data-reactid="49">diz</a><!-- react-text: 50 --> © 2016 <!-- /react-text --><!-- react-text: 51 -->Minimalist<!-- /react-text --></div></main></div></div>
+
+<script src="/diz-theme-minimalist/scripts/bundle.js"></script>
+<script>
+  window.__DIZ__.render({"post":{"type":"LIST","slug":"","data":{"title":"Minimalist / 2","description":null,"page":2,"items":[{"type":"POST","slug":"minimalist-is-default-theme-of-diz","data":{"id":"urn:uuid:c8cc76b0-db48-11e6-bd2f-2919a78e58d7","title":"MinimalistはDizのデフォルトテーマです","date":"2017-01-15T17:36:12.560Z","page":2},"original":"\n![](/diz-theme-minimalist/images/imas-haruka.jpg)\n\n装飾をほとんどしていないテーマです。\n\n<!-- break -->\n\nカテゴリとかあんまりサポートしてないのは、カテゴリとか付けたくなるような大きな題材のときは、新しいブログに分けちゃって、それぞれその情報に特化したブログを作りたかったから。\n\nまぁまだ途中なので変わる可能性があります。\n","url":"https://nju33.github.io/diz-theme-minimalist/posts/minimalist-is-default-theme-of-diz/2/","absURL":"/diz-theme-minimalist/posts/minimalist-is-default-theme-of-diz/2/","contents":"<p><img src=\"/diz-theme-minimalist/images/imas-haruka.jpg\" alt=\"\"></p>\n<p>装飾をほとんどしていないテーマです。</p>\n<!-- break -->\n<p>カテゴリとかあんまりサポートしてないのは、カテゴリとか付けたくなるような大きな題材のときは、新しいブログに分けちゃって、それぞれその情報に特化したブログを作りたかったから。</p>\n<p>まぁまだ途中なので変わる可能性があります。</p>\n","contentsBeginning":"<p><img src=\"/diz-theme-minimalist/images/imas-haruka.jpg\" alt=\"\"></p>\n<p>装飾をほとんどしていないテーマです。</p>"}]},"original":"","url":"https://nju33.github.io/diz-theme-minimalist/2/","absURL":"/diz-theme-minimalist/2/","root":{"absURL":"/diz-theme-minimalist/","mainDirectory":{"name":"posts","posts":[{"type":"POST","slug":"minimalist-is-diz-theme","data":{"id":"urn:uuid:be1934b0-db48-11e6-8916-89d1b9e3e58f","title":"Minimalist is diz theme","date":"2017-01-15T17:35:42.189Z","page":1},"original":"\n![](/diz-theme-minimalist/images/img.png)\n\nMinimalist is a theme made simple and easy to read\n\n<!-- break -->\n\nThis is still on its way. There is a possibility that the design etc will change greatly from now on.\n\n:)\n","url":"https://nju33.github.io/diz-theme-minimalist/posts/minimalist-is-diz-theme/","absURL":"/diz-theme-minimalist/posts/minimalist-is-diz-theme/","contents":"<p><img src=\"/diz-theme-minimalist/images/img.png\" alt=\"\"></p>\n<p>Minimalist is a theme made simple and easy to read</p>\n<!-- break -->\n<p>This is still on its way. There is a possibility that the design etc will change greatly from now on.</p>\n<p>:)</p>\n","contentsBeginning":"<p><img src=\"/diz-theme-minimalist/images/img.png\" alt=\"\"></p>\n<p>Minimalist is a theme made simple and easy to read</p>"},{"type":"POST","slug":"minimalist-is-default-theme-of-diz","data":{"id":"urn:uuid:c8cc76b0-db48-11e6-bd2f-2919a78e58d7","title":"MinimalistはDizのデフォルトテーマです","date":"2017-01-15T17:36:12.560Z","page":2},"original":"\n![](/diz-theme-minimalist/images/imas-haruka.jpg)\n\n装飾をほとんどしていないテーマです。\n\n<!-- break -->\n\nカテゴリとかあんまりサポートしてないのは、カテゴリとか付けたくなるような大きな題材のときは、新しいブログに分けちゃって、それぞれその情報に特化したブログを作りたかったから。\n\nまぁまだ途中なので変わる可能性があります。\n","url":"https://nju33.github.io/diz-theme-minimalist/posts/minimalist-is-default-theme-of-diz/2/","absURL":"/diz-theme-minimalist/posts/minimalist-is-default-theme-of-diz/2/","contents":"<p><img src=\"/diz-theme-minimalist/images/imas-haruka.jpg\" alt=\"\"></p>\n<p>装飾をほとんどしていないテーマです。</p>\n<!-- break -->\n<p>カテゴリとかあんまりサポートしてないのは、カテゴリとか付けたくなるような大きな題材のときは、新しいブログに分けちゃって、それぞれその情報に特化したブログを作りたかったから。</p>\n<p>まぁまだ途中なので変わる可能性があります。</p>\n","contentsBeginning":"<p><img src=\"/diz-theme-minimalist/images/imas-haruka.jpg\" alt=\"\"></p>\n<p>装飾をほとんどしていないテーマです。</p>"}]},"config":{"title":"Minimalist","description":"Minimalist is Diz theme","base":"","url":"https://nju33.github.io/diz-theme-minimalist/","id":"urn:uuid:cc67c5e0-db48-11e6-bc24-0d48f33b2d8d","author":"nju33"}},"directory":{"name":"","posts":[{"type":"LIST","slug":"","data":{"title":"Minimalist","description":null,"page":1,"items":[{"type":"POST","slug":"minimalist-is-diz-theme","data":{"id":"urn:uuid:be1934b0-db48-11e6-8916-89d1b9e3e58f","title":"Minimalist is diz theme","date":"2017-01-15T17:35:42.189Z","page":1},"original":"\n![](/diz-theme-minimalist/images/img.png)\n\nMinimalist is a theme made simple and easy to read\n\n<!-- break -->\n\nThis is still on its way. There is a possibility that the design etc will change greatly from now on.\n\n:)\n","url":"https://nju33.github.io/diz-theme-minimalist/posts/minimalist-is-diz-theme/","absURL":"/diz-theme-minimalist/posts/minimalist-is-diz-theme/","contents":"<p><img src=\"/diz-theme-minimalist/images/img.png\" alt=\"\"></p>\n<p>Minimalist is a theme made simple and easy to read</p>\n<!-- break -->\n<p>This is still on its way. There is a possibility that the design etc will change greatly from now on.</p>\n<p>:)</p>\n","contentsBeginning":"<p><img src=\"/diz-theme-minimalist/images/img.png\" alt=\"\"></p>\n<p>Minimalist is a theme made simple and easy to read</p>"}]},"original":"","url":"https://nju33.github.io/diz-theme-minimalist/","absURL":"/diz-theme-minimalist/"},{"type":"LIST","slug":"","data":{"title":"Minimalist / 2","description":null,"page":2,"items":[{"type":"POST","slug":"minimalist-is-default-theme-of-diz","data":{"id":"urn:uuid:c8cc76b0-db48-11e6-bd2f-2919a78e58d7","title":"MinimalistはDizのデフォルトテーマです","date":"2017-01-15T17:36:12.560Z","page":2},"original":"\n![](/diz-theme-minimalist/images/imas-haruka.jpg)\n\n装飾をほとんどしていないテーマです。\n\n<!-- break -->\n\nカテゴリとかあんまりサポートしてないのは、カテゴリとか付けたくなるような大きな題材のときは、新しいブログに分けちゃって、それぞれその情報に特化したブログを作りたかったから。\n\nまぁまだ途中なので変わる可能性があります。\n","url":"https://nju33.github.io/diz-theme-minimalist/posts/minimalist-is-default-theme-of-diz/2/","absURL":"/diz-theme-minimalist/posts/minimalist-is-default-theme-of-diz/2/","contents":"<p><img src=\"/diz-theme-minimalist/images/imas-haruka.jpg\" alt=\"\"></p>\n<p>装飾をほとんどしていないテーマです。</p>\n<!-- break -->\n<p>カテゴリとかあんまりサポートしてないのは、カテゴリとか付けたくなるような大きな題材のときは、新しいブログに分けちゃって、それぞれその情報に特化したブログを作りたかったから。</p>\n<p>まぁまだ途中なので変わる可能性があります。</p>\n","contentsBeginning":"<p><img src=\"/diz-theme-minimalist/images/imas-haruka.jpg\" alt=\"\"></p>\n<p>装飾をほとんどしていないテーマです。</p>"}]},"original":"","url":"https://nju33.github.io/diz-theme-minimalist/2/","absURL":"/diz-theme-minimalist/2/"}]}},"config":{}})
+</script>
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://nju33.github.io/diz-theme-minimalist/","name":"home"}},{"@type":"ListItem","position":2,"item":{}},{"@type":"ListItem","position":3,"item":{"@id":"https://nju33.github.io/diz-theme-minimalist/2/","name":"Minimalist / 2"}}]}
+</script>
+</body>
+</html>

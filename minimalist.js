@@ -1,1 +1,1 @@
-module.exports = require('./dist/minimalist').default;
+module.exports = require('./dist/minimalist-renderer').default;

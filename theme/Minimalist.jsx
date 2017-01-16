@@ -1,95 +1,82 @@
-import React from 'react';
-import Theme from 'diz/theme';
+import React, {Component} from 'react';
+import omitBy from 'lodash.omitby';
+import isNull from 'lodash.isnull';
 import Breadcrumb from './Breadcrumb.jsx';
 import Sidebar from './Sidebar.jsx';
 import List from './List.jsx';
 import Post from './Post.jsx';
 import Footer from './Footer.jsx';
 
-export default class Minimalist extends Theme {
-  static get wrapper() {
-  return `
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="/styles/index.css">
-<title>Document</title>
-</head>
-<body>
-<div id="blog" class="blog">{markup}</div>
-
-<script src="/scripts/bundle.js"></script>
-<script>
-  window.${this.PROP_NAME}.render({props})
-</script>
-{breadcrumbJsonLD}
-</body>
-</html>
-  `.trim();
+export default class Minimalist extends Component{
+  getContent(post) {
+    switch (post.type) {
+      case 'LIST': {
+        return List;
+      }
+      case 'POST': {
+        return Post;
+      }
+      default: {
+        return Post;
+      }
+    }
   }
 
-  static renderToString(props) {
-    props = this.toSafeJson(props);
-    const markup = this.render(props);
-    const breadcrumbJsonLD = this.buildJsonLDOfBreadcrumb(
-      JSON.parse(props).breadcrumb
-    );
+  buildBreadcrumb(post) {
+    const itemListElement = [];
+    itemListElement.push({
+      '@type': 'ListItem',
+      position: 1,
+      item: omitBy({
+        '@id': post.root.absURL || null,
+        name: 'home',
+        image: post.data.image || null
+      }, isNull)
+    });
 
-    return this.buildHTML({markup, props, breadcrumbJsonLD});
-  }
+    itemListElement.push({
+      '@type': 'ListItem',
+      position: 2,
+      item: omitBy({
+        '@id': post.directory.name || 'list',
+        name: post.directory.name || 'list'
+      }, isNull)
+    });
 
-  static buildJsonLDOfBreadcrumb(breadcrumb) {
-    const items = breadcrumb
-      .filter(item => (
-        !item.fake && item.name
-      ))
-      .map((item, idx) => (
-        {
-          '@type': 'ListItem',
-          position: idx+1,
-          item: {
-            '@id': item.id,
-            name: item.name
-          }
-        }
-      ));
-    const json = JSON.stringify({
+    if (post.data.title || post.data.page > 1) {
+      itemListElement.push({
+        '@type': 'ListItem',
+        position: 3,
+        item: omitBy({
+          '@id': post.absURL || null,
+          name: post.data.title || post.data.page,
+          image: post.data.iamge || null
+        }, isNull)
+      });
+    }
+
+    return {
       '@context': 'http://schema.org',
       '@type': 'BreadcrumbList',
-      itemElement: items
-    });
-    return `<script type="application/ld+json">${json}</script>`
-  }
-
-  renderContentOfList() {
-    return List;
-  }
-
-  renderContentOfPost() {
-    return Post;
+      itemListElement
+    };
   }
 
   render() {
-    const {props} = this;
-    const {type, breadcrumb} = props;
-    const Content = this.renderContents(type);
+    const {type, post} = this.props;
+    const Content = this.getContent(post);
 
     return (
       <div className="container">
-        <Sidebar {...props}/>
+        <Sidebar post={post}/>
         <main id="main" className="main">
           <div className="contents">
-            <Breadcrumb {...props}/>
-            <Content {...props}/>
+            <Breadcrumb breadcrumb={this.buildBreadcrumb(post)}/>
+            <Content post={post}/>
           </div>
-          <Footer {...props}/>
+          <Footer post={post}/>
         </main>
       </div>
     );
   }
 }
-
-Minimalist.init();

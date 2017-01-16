@@ -3,6 +3,7 @@ import browserSync from 'browser-sync';
 import blog from './gulp-tasks/blog';
 import style from './gulp-tasks/style';
 import script from './gulp-tasks/script';
+import jsx from './gulp-tasks/jsx';
 import image from './gulp-tasks/image';
 import favicon from './gulp-tasks/favicon';
 import bsConfig from './bs-config';
@@ -12,9 +13,9 @@ const bs = browserSync.create(pkg.name);
 
 const conf = {
   blog: [
-    null,
-    'local/',
-    '+(theme|src)/**/*.+(md|less|js|jsx)'
+    'src/blogs/',
+    'docs/',
+    'src/blogs/**/*'
   ],
   style: [
     'src/styles/index.less',
@@ -26,7 +27,12 @@ const conf = {
     'dist/',
     'lib/**/*.js'
   ],
-  image: ['assets/images/*', 'local/blog/images/'],
+  jsx: [
+    'theme/**/*.jsx',
+    'dist/',
+    'theme/**/*.jsx'
+  ],
+  image: ['assets/images/**/*', 'local/blog/images/'],
   favicon: ['assets/favicons/*', 'local/blog/']
 };
 
@@ -34,6 +40,7 @@ const tasks = {
   blog,
   style,
   script,
+  jsx,
   image,
   favicon
 };

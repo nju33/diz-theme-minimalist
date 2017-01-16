@@ -7,31 +7,24 @@ export default class Breadcrumb extends Component {
     return (
       <div className="breadcrumb__box">
         <ul className="breadcrumb__list">
-          {breadcrumb.reduce((result, item, idx) => {
-            if (item.name === '') {
-              return result;
-            }
-            if (item.fake) {
-              result.push(
+          {breadcrumb.itemListElement.map((elem, idx) => {
+            if (/^\//.test(elem.item['@id'])) {
+              return (
                 <li key={idx} className="breadcrumb__item">
-                  <a className="breadcrumb__link">{item.name}</a>
-                </li>
-              );
-            } else {
-              result.push(
-                <li key={idx} className="breadcrumb__item">
-                  <a href={item.id} className="breadcrumb__link">{item.name}</a>
+                  <a className="breadcrumb__link" href={elem.item['@id']}>
+                    {elem.item.name}
+                  </a>
                 </li>
               );
             }
-            return result;
-          }, [])}
+            return (
+              <li key={idx} className="breadcrumb__item">
+                <a className="breadcrumb__link">{elem.item.name}</a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     )
   }
 }
-
-Breadcrumb.propTypes = {
-  breadcrumb: PropTypes.array
-};

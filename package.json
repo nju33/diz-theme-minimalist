@@ -87,7 +87,7 @@
     "preinstall": "./dependencies.sh",
     "prepublish": "yarn build",
     "build": "NODE_ENV=production gulp style jsx script",
-    "build:docs": "gulp blog image && rm -rf docs/**; cp -r local/blog/{diz-theme-minimalist,images} docs",
+    "build:docs": "gulp blog image && rm -rf docs/**; cp -r local/blog/{diz-theme-minimalist/*,images} docs",
     "image-cache:clean": "rm assets/images/.cache",
     "start": "gulp watch"
   },

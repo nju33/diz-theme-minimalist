@@ -12,7 +12,7 @@ export default class Post extends Component {
     const prevElem = (() => {
       if (prev) {
         return (
-          <a className="pager__link" href={prev.absURL}>{prev.data.title}</a>
+          <a className="pager__link" href={prev.url}>{prev.data.title}</a>
         );
       }
       return <a className="pager__link"></a>;
@@ -21,7 +21,7 @@ export default class Post extends Component {
     const nextElem = (() => {
       if (next) {
         return (
-          <a className="pager__link" href={next.absURL}>{next.data.title}</a>
+          <a className="pager__link" href={next.url}>{next.data.title}</a>
         );
       }
       return <a className="pager__link"></a>;

@@ -14,19 +14,19 @@ export default class List extends Component {
         <article key={idx} className="list__item">
           <header className="list__title">
             <h2>
-              <a href={post.absURL}>{post.data.title}</a>
+              <a href={post.url}>{post.data.title}</a>
             </h2>
           </header>
           <div className="list__contents"
             dangerouslySetInnerHTML={{__html: post.contentsBeginning}}></div>
-          <a className="list__more" href={post.absURL}>Read more</a>
+          <a className="list__more" href={post.url}>Read more</a>
         </article>
       );
     });
     const prevElem = (() => {
       if (prev) {
         return (
-          <a className="pager__link" href={prev.absURL}>Prev</a>
+          <a className="pager__link" href={prev.url}>Prev</a>
         );
       }
       return <a className="pager__link"></a>;
@@ -34,7 +34,7 @@ export default class List extends Component {
     const nextElem = (() => {
       if (next) {
         return (
-          <a className="pager__link" href={next.absURL}>Next</a>
+          <a className="pager__link" href={next.url}>Next</a>
         );
       }
       return <a className="pager__link"></a>;

@@ -11,7 +11,9 @@ module.exports = {
   author: 'nju33',
   theme: {
     Renderer,
-    config: {}
+    config: {
+      'base': '/diz-theme-minimalist'
+    }
   },
   compile(contents) {
     return new Promise((resolve, reject) => {

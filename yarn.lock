@@ -2256,13 +2256,17 @@ diz-plugin-collection-page-generator@^0.1.0:
     string-template "^1.0.0"
     validated "^0.9.0"
 
-diz-theme-minimalist@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/diz-theme-minimalist/-/diz-theme-minimalist-0.0.2.tgz#3c32a0db56ef3ccd55577bf83ed0a1b5d2659dc3"
+diz-theme-minimalist@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/diz-theme-minimalist/-/diz-theme-minimalist-0.1.1.tgz#a337f7c69edc314392a0e21759ffaa793c07a14f"
   dependencies:
+    diz-theme "^0.0.1"
+    lodash.isnull "^3.0.0"
+    lodash.omitby "^4.6.0"
     react "^15.4.1"
     react-burger-menu "^1.10.10"
     react-dom "^15.4.1"
+    string-template "^1.0.0"
 
 diz-theme@^0.0.1:
   version "0.0.1"
@@ -2272,9 +2276,9 @@ diz-theme@^0.0.1:
     babel-plugin-transform-runtime "^6.15.0"
     babel-preset-react "^6.16.0"
 
-diz@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/diz/-/diz-0.1.0.tgz#4e8e32008473eba758786e3163414566c9c8ff82"
+diz@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/diz/-/diz-0.1.4.tgz#fdf1c565c9594e49ff0ca21412e9856baee424a9"
   dependencies:
     babel-loader "^6.2.10"
     babel-plugin-transform-runtime "^6.15.0"
@@ -2282,7 +2286,7 @@ diz@^0.1.0:
     core-js "^2.4.1"
     css-loader "^0.26.1"
     diz-plugin-collection-page-generator "^0.1.0"
-    diz-theme-minimalist "^0.0.2"
+    diz-theme-minimalist "^0.1.1"
     event-stream "^3.3.4"
     glob "^7.0.5"
     gray-matter "^2.0.2"

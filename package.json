@@ -7,11 +7,6 @@
     "url": "https://github.com/nju33/diz-theme-minimalist/issues",
     "email": "nju33.ki@gmail.com"
   },
-  "diz": {
-    "jsx": "./dist/Minimalist.jsx",
-    "html": "./dist/index.html",
-    "css": "./dist/index.css"
-  },
   "dependencies": {
     "diz-theme": "^0.0.1",
     "lodash.isnull": "^3.0.0",
@@ -39,6 +34,7 @@
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.7.5",
     "diz": "^0.1.4",
+    "diz-plugin-collection-page-generator": "^0.1.0",
     "exit-hook": "^1.1.1",
     "gulp": "^3.9.1",
     "gulp-asset-cache": "^1.1.3",

@@ -1,5 +1,4 @@
 const CollectionPageGenerator = require('diz-plugin-collection-page-generator');
-const AtomFeed = require('diz-plugin-atom-feed');
 const magu = require('magu');
 const Renderer = require('../../..');
 
@@ -27,7 +26,6 @@ module.exports = {
     });
   },
   plugins: [
-    new CollectionPageGenerator({pager: 30}),
-    new AtomFeed()
+    new CollectionPageGenerator({pager: 30})
   ]
 };

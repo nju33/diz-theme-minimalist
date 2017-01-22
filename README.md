@@ -1,5 +1,7 @@
 # Minimalist
 
+![Dix and React](https://github.com/nju33/diz-theme-minimalist/blob/master/media/image.png?raw=true)
+
 A [Diz](https://github.com/nju33/diz) theme. [[demo](https://nju33.github.io/diz-theme-minimalist/)]
 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) ![Dependencies Status](https://david-dm.org/nju33/diz-theme-minimalist.svg)

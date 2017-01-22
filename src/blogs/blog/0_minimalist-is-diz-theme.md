@@ -1,15 +1,98 @@
 ---
-id: urn:uuid:be1934b0-db48-11e6-8916-89d1b9e3e58f
 title: Minimalist is diz theme
-date: 2017-01-15T17:35:42.189Z
 ---
 
-![](/diz-theme-minimalist/images/diz-theme-minimalist/img.png)
+![](/diz-theme-minimalist/images/diz-theme-minimalist/image.png)
 
-Minimalist is a theme made simple and easy to read
+A is a simple theme with little ornament for diz.
 
-<!-- break -->
+##　Element
 
-This is still on its way. There is a possibility that the design etc will change greatly from now on.
+### headline
 
-:)
+# h1
+## h2
+### h3
+#### h4
+##### h5
+
+### List
+
+1. foo
+2. bar
+3. baz
+
+
+- hoge
+- fuga
+- piyo
+
+### Image
+
+![image](https://source.unsplash.com/category/nature/500x500)
+
+### Blockquote
+
+> Lorem ipsum dolor sit amet, tempor mauris suspendisse, velit fusce non. Erat hendrerit nibh. Blandit placerat, eget imperdiet lectus eget pede iaculis, litora massa risus elit et phasellus a, at metus sodales, nulla nisl. Ut tempor, curabitur blandit ut congue porttitor lobortis mauris,
+
+### Table
+
+|left|center|right|
+|:--|:-:|--:|
+|val|val|val|
+|val|val|val|
+
+### Code block
+
+Using [nju33/magu](https://github.com/nju33/magu) and [nju33/magu-plugin-hljs](https://github.com/nju33/magu-plugin-hljs)
+
+#### HTML
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p>html</p>
+</body>
+</html>
+```
+
+#### CSS
+
+```css
+body {
+  font-size: 16px;
+  overflow: hidden;
+  padding: 1em;
+}
+```
+
+#### JS
+
+```js
+mySingleton.getInstance = function () {
+  if (this._instance == null) {
+    if (isFoo()) {
+      this._instance = new FooSingleton();
+    } else {
+      this._instance = new BasicSingleton();
+    }
+  }
+  return this._instance;
+};
+```
+
+### Inline elements
+
+- `<a/>`
+- `<em/>`
+- `<strong/>`
+- code span
+
+Lorem [ipsum](https://nju33.github.io/diz-theme-minimalist/) dolor *sit* amet, tempor mauris **suspendisse**, velit fusce non. Erat hendrerit nibh. `Blandit placerat`, eget imperdiet lectus eget pede iaculis,

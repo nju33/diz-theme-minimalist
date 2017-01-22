@@ -1,5 +1,7 @@
 const CollectionPageGenerator = require('diz-plugin-collection-page-generator');
 const magu = require('magu');
+const hljs = require('magu-plugin-hljs');
+const {highlight, highlightAuto} = require('highlight.js');
 const Renderer = require('../../..');
 
 module.exports = {
@@ -16,7 +18,17 @@ module.exports = {
   },
   compile(contents) {
     return new Promise((resolve, reject) => {
-      magu().process(contents)
+      magu({
+        code(code, lang) {
+          return `
+<pre>
+  <code class="aaa lang-${lang}">${highlight(lang, code).value}</code>
+</pre>
+          `
+        }
+      }, [
+        // hljs()
+      ]).process(contents)
       .then(result => {
         resolve(result.html);
       })

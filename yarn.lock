@@ -3635,6 +3635,10 @@ hexa-color-regex@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hexa-color-regex/-/hexa-color-regex-1.0.0.tgz#3155e7d672ba046d309bb1f5e0d3b0d02dbc8213"
 
+highlight.js@^9.9.0:
+  version "9.9.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.9.0.tgz#b9995dcfdc2773e307a34f0460d92b9a474782c0"
+
 hoek@2.x.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
@@ -4851,6 +4855,12 @@ magic-string@^0.14.0:
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.14.0.tgz#57224aef1701caeed273b17a39a956e72b172462"
   dependencies:
     vlq "^0.2.1"
+
+magu-plugin-hljs@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/magu-plugin-hljs/-/magu-plugin-hljs-0.0.2.tgz#5c6523b1093ea852649ada5c6a1cfaaa49bef7ff"
+  dependencies:
+    highlight.js "^9.9.0"
 
 magu@^0.0.2:
   version "0.0.2"

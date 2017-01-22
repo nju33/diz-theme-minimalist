@@ -19,7 +19,7 @@ const conf = {
   ],
   style: [
     'src/styles/index.less',
-    process.env.NODE_ENV === 'production' ? 'dist/' : 'local/blog/styles/',
+    'local/blog/styles/',
     'src/styles/**/*.less'
   ],
   script: [

@@ -54,7 +54,7 @@
     "highlight.js": "^9.9.0",
     "imagemin-pngquant": "^5.0.0",
     "lodash": "^4.15.0",
-    "magu": "^0.0.2",
+    "magu": "^0.0.5",
     "magu-plugin-hljs": "^0.0.2",
     "mobx": "^2.6.2",
     "postcss-assets": "^4.1.0",

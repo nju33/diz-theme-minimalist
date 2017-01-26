@@ -4862,12 +4862,13 @@ magu-plugin-hljs@^0.0.2:
   dependencies:
     highlight.js "^9.9.0"
 
-magu@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/magu/-/magu-0.0.2.tgz#fe7bca97d2643a909fefe50098213926ff4fc4a4"
+magu@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/magu/-/magu-0.0.5.tgz#672d771250bf3db68f2befb3d724765cce617fad"
   dependencies:
     cheerio "^0.22.0"
     marked "^0.3.6"
+    p-is-promise "^1.1.0"
     pupa "^1.0.0"
 
 map-cache@^0.2.0:

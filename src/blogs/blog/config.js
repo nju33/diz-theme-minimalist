@@ -21,9 +21,7 @@ module.exports = {
       magu({
         code(code, lang) {
           return `
-<pre>
-  <code class="aaa lang-${lang}">${highlight(lang, code).value}</code>
-</pre>
+<pre><code class="lang-${lang}">${highlight(lang, code).value}</code></pre>
           `
         }
       }, [

@@ -20,7 +20,8 @@ const conf = {
   style: [
     'src/styles/index.less',
     '.',
-    'src/styles/**/*.less'
+    'src/styles/**/*.less',
+    ['style', 'blog']
   ],
   script: [
     'lib/**/*.js',

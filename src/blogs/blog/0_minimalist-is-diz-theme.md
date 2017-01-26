@@ -19,17 +19,23 @@ A is a simple theme with little ornament for diz.
 ### List
 
 1. foo
+  1. hoge
 2. bar
+  1. fuga
 3. baz
+  1. piyo
 
 
 - hoge
+  - foo
 - fuga
+  - bar
 - piyo
+  - baz
 
 ### Image
 
-![image](https://source.unsplash.com/category/nature/500x500)
+![image](https://source.unsplash.com/category/nature/500x300)
 
 ### Blockquote
 

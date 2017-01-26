@@ -78,7 +78,7 @@
   ],
   "license": "MIT",
   "main": "minimalist.js",
-  "style": "index.css",
+  "style": "minimalist.css",
   "repository": "nju33/diz-theme-minimalist",
   "scripts": {
     "___postinstall": "(cd node_modules/lwip && npm i)",

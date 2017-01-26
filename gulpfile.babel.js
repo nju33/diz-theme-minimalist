@@ -19,7 +19,7 @@ const conf = {
   ],
   style: [
     'src/styles/index.less',
-    'local/blog/styles/',
+    '.',
     'src/styles/**/*.less'
   ],
   script: [

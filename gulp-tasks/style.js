@@ -16,6 +16,7 @@ import colorblind from 'postcss-colorblind';
 import mqpacker from 'css-mqpacker';
 import cssnano from 'cssnano';
 import gulpif from 'gulp-if';
+import rename from 'gulp-rename';
 import {isProduction, isDebug} from './helpers';
 
 const plugins = [
@@ -66,6 +67,7 @@ export default {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss(plugins))
+    .pipe(rename({basename: 'minimalist'}))
     .pipe(gulp.dest(config[this.name][1]));
   }
 }

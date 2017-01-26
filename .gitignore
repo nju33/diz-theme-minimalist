@@ -65,3 +65,4 @@ node_modules
 /dist/
 /local/
 assets/images/.cache
+/minimalist.css

@@ -55,15 +55,107 @@ module.exports = {
   theme: {
     Renderer: Minimalist
     config: {
-      base: null // default
+      //* option
       // Specify the path to the scripts directory
       // (e.g.)
       // When the blog's URL is like this
       // http://example.com/foo/
       // It is good to specify `/foo`
+      base: null // default
+
+      //* option
+      // Whether to output CSS directly to the style tag of head
+      // If wanna use it with your CSS, set it to false
+      inlineCSS: true // default
     }
   }
 }
+```
+
+## Tips
+
+Import CSS of this theme to your CSS.
+
+### PostCSS
+
+Let's install 2 packages
+  - [postcss](https://github.com/postcss/postcss)
+  - [postcss-import](https://github.com/postcss/postcss-import)
+
+```bash
+yarn add -D postcss postcss-import
+```
+
+Setup
+
+```js
+const postcss = require('postcss');
+const atImport = require('postcss-import');
+
+postcss([atImport])
+  .process(cssContents)
+  .then(...);
+```
+
+Import it at the beginning of the `.css` file.
+
+```css
+@import "diz-theme-minimalist";
+/* == @import "./node_modules/diz-theme-minimalist/minimalist.css"; */
+```
+
+### Less
+
+Let's install 2 packages
+  - [less](https://github.com/less/less.js)
+  - [less-plugin-npm-import](https://github.com/less/less-plugin-npm-import)
+
+```bash
+yarn add -D less less-plugin-npm-import
+```
+
+Setup
+
+```js
+const less = require('sass');
+const NpmImportPlugin = require('less-plugin-npm-import');
+
+less.render(lessContents, {plugins: [new NpmImportPlugin()]})
+  .then(...);
+```
+
+Import it at the beginning of the `*.less` file.
+
+```css
+@import (less) "npm://diz-theme-minimalist/minimalist.css";
+```
+
+### Sass
+
+Let's install 2 packages
+  - [node-sass](https://github.com/sass/node-sass)
+  - [sass-module-importer](https://github.com/lucasmotta/sass-module-importer)
+
+```bash
+yarn add -D node-sass sass-module-importer
+```
+
+Setup
+
+```js
+const sass = require('node-sass');
+const moduleImporter = require('sass-module-importer');
+
+sass.render({
+  file: 'path/to/*.scss',
+  importer: moduleImporter()
+}, callback);
+```
+
+Import it at the beginning of the `*.scss` or `*.sass` file.
+
+```css
+@import (less) "npm://diz-theme-minimalist/minimalist.css";
 ```
 
 ## License

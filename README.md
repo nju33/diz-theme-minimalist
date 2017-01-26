@@ -117,7 +117,7 @@ yarn add -D less less-plugin-npm-import
 Setup
 
 ```js
-const less = require('sass');
+const less = require('less');
 const NpmImportPlugin = require('less-plugin-npm-import');
 
 less.render(lessContents, {plugins: [new NpmImportPlugin()]})
@@ -155,7 +155,7 @@ sass.render({
 Import it at the beginning of the `*.scss` or `*.sass` file.
 
 ```css
-@import (less) "npm://diz-theme-minimalist/minimalist.css";
+@import "diz-theme-minimalist"
 ```
 
 ## License

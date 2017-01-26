@@ -67,6 +67,15 @@ module.exports = {
       // Whether to output CSS directly to the style tag of head
       // If wanna use it with your CSS, set it to false
       inlineCSS: true // default
+      //* option
+      // When A is false,
+      // specify the public path up to
+      // the CSS that you made
+      stylesheetPath: '/styles/index.css' // default
+
+      //* option
+      // <html lang={lang}>
+      lang: null // default
     }
   }
 }

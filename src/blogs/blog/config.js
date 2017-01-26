@@ -13,7 +13,8 @@ module.exports = {
   theme: {
     Renderer,
     config: {
-      'base': '/diz-theme-minimalist'
+      'base': '/diz-theme-minimalist',
+      lang: 'ja'
     }
   },
   compile(contents) {

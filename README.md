@@ -74,6 +74,10 @@ module.exports = {
       stylesheetPath: '/styles/index.css' // default
 
       //* option
+      // Whether to make twemoji available
+      twemoji: false // default
+
+      //* option
       // <html lang={lang}>
       lang: null // default
     }

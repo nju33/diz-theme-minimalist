@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import omitBy from 'lodash.omitby';
 import isNull from 'lodash.isnull';
+import Twemoji from 'react-twemoji';
 import Breadcrumb from './Breadcrumb.jsx';
 import Sidebar from './Sidebar.jsx';
 import List from './List.jsx';
@@ -63,8 +64,13 @@ export default class Minimalist extends Component{
   }
 
   render() {
-    const {type, post} = this.props;
+    const {type, post, config} = this.props;
     const Content = this.getContent(post);
+    let content = <Content post={post}/>;
+
+    if (config.twemoji) {
+      content = <Twemoji>{content}</Twemoji>;
+    }
 
     return (
       <div className="container">
@@ -72,7 +78,7 @@ export default class Minimalist extends Component{
         <main id="main" className="main">
           <div className="contents">
             <Breadcrumb breadcrumb={this.buildBreadcrumb(post)}/>
-            <Content post={post}/>
+            {content}
           </div>
           <Footer post={post}/>
         </main>

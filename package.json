@@ -14,7 +14,8 @@
     "pupa": "^1.0.0",
     "react": "^15.4.1",
     "react-burger-menu": "^1.10.10",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "react-twemoji": "^0.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
@@ -89,6 +90,5 @@
     "build:docs": "gulp blog image && rm -rf docs/**; cp -r local/blog/{diz-theme-minimalist/*,images} docs",
     "image-cache:clean": "rm assets/images/.cache",
     "start": "gulp watch"
-  },
-  "peerDependencies": {}
+  }
 }

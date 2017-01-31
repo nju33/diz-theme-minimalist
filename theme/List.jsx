@@ -54,10 +54,10 @@ export default class List extends Component {
   }
 }
 
-List.propTypes = {
-  items: PropTypes.array.isRequired
-};
-
-List.defaultProps = {
-  items: []
-};
+// List.propTypes = {
+//   items: PropTypes.array.isRequired
+// };
+//
+// List.defaultProps = {
+//   items: []
+// };

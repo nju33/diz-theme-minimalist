@@ -14,7 +14,8 @@ module.exports = {
     Renderer,
     config: {
       'base': '/diz-theme-minimalist',
-      lang: 'ja'
+      lang: 'ja',
+      twemoji: true
     }
   },
   compile(contents) {

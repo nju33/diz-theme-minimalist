@@ -34,7 +34,7 @@
     "browser-sync": "^2.14.3",
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.7.5",
-    "diz": "^0.2.0",
+    "diz": "^0.2.1",
     "diz-plugin-collection-page-generator": "^0.1.0",
     "exit-hook": "^1.1.1",
     "gulp": "^3.9.1",

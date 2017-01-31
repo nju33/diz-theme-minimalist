@@ -2276,9 +2276,9 @@ diz-theme@^0.0.1:
     babel-plugin-transform-runtime "^6.15.0"
     babel-preset-react "^6.16.0"
 
-diz@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/diz/-/diz-0.2.0.tgz#e43ea0cc75e141804df4f2e5d93da127a442bb61"
+diz@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/diz/-/diz-0.2.1.tgz#08700d3eafa5a1e8d26d7fbd35430bd7aaa80b5b"
   dependencies:
     babel-loader "^6.2.10"
     babel-plugin-transform-runtime "^6.15.0"

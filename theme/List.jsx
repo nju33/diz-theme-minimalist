@@ -10,6 +10,13 @@ export default class List extends Component {
     const next = directory.posts[page];
 
     const postElements = items.map((post, idx) => {
+      const moreElem = (() => {
+        if (post.hasBeginning) {
+          return <a className="list__more" href={post.url}>Read more</a>;
+        }
+        return null;
+      })();
+
       return (
         <article key={idx} className="list__item">
           <header className="list__title">
@@ -19,7 +26,7 @@ export default class List extends Component {
           </header>
           <div className="list__contents"
             dangerouslySetInnerHTML={{__html: post.contentsBeginning}}></div>
-          <a className="list__more" href={post.url}>Read more</a>
+          {moreElem}
         </article>
       );
     });
